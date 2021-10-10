@@ -1,0 +1,25 @@
+==11234== Memcheck, a memory error detector
+==11234== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11234== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==11234== Command: ./app/shell-app
+==11234== 
+Averaged sensor reading: 10
+==11234== Conditional jump or move depends on uninitialised value(s)
+==11234==    at 0x10A31B: main (main.cpp:9)
+==11234== 
+==11234== 
+==11234== HEAP SUMMARY:
+==11234==     in use at exit: 44 bytes in 2 blocks
+==11234==   total heap usage: 4 allocs, 2 frees, 76,844 bytes allocated
+==11234== 
+==11234== LEAK SUMMARY:
+==11234==    definitely lost: 24 bytes in 1 blocks
+==11234==    indirectly lost: 20 bytes in 1 blocks
+==11234==      possibly lost: 0 bytes in 0 blocks
+==11234==    still reachable: 0 bytes in 0 blocks
+==11234==         suppressed: 0 bytes in 0 blocks
+==11234== Rerun with --leak-check=full to see details of leaked memory
+==11234== 
+==11234== Use --track-origins=yes to see where uninitialised values come from
+==11234== For lists of detected and suppressed errors, rerun with: -s
+==11234== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
